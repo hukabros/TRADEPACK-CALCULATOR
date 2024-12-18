@@ -8,52 +8,163 @@
 <body>
   <h1>貿易包計算器</h1>
 
-  <!-- 材料交易所單價表格 -->
-  <h3>材料交易所單價</h3>
+  <!-- 材料交易所單價輸入 -->
+  <h2>材料交易所單價</h2>
   <table border="1" cellpadding="5">
     <tr>
       <th>材料</th>
       <th>交易所單價</th>
     </tr>
-    <tr><td>Potato</td><td><input type="number" id="potato-price" value="0"></td></tr>
-    <tr><td>Corn</td><td><input type="number" id="corn-price" value="0"></td></tr>
-    <tr><td>Wheat</td><td><input type="number" id="wheat-price" value="0"></td></tr>
-    <tr><td>Carrot</td><td><input type="number" id="carrot-price" value="0"></td></tr>
-    <tr><td>Cabbage</td><td><input type="number" id="cabbage-price" value="0"></td></tr>
-    <tr><td>Pepper</td><td><input type="number" id="pepper-price" value="0"></td></tr>
-    <tr><td>Onion</td><td><input type="number" id="onion-price" value="0"></td></tr>
-    <tr><td>Beans</td><td><input type="number" id="beans-price" value="0"></td></tr>
-    <tr><td>Pumpkin</td><td><input type="number" id="pumpkin-price" value="0"></td></tr>
-    <tr><td>Pea</td><td><input type="number" id="pea-price" value="0"></td></tr>
-    <tr><td>Garlic</td><td><input type="number" id="garlic-price" value="0"></td></tr>
-    <tr><td>Acorn</td><td><input type="number" id="acorn-price" value="0"></td></tr>
-    <tr><td>Brocolli</td><td><input type="number" id="brocolli-price" value="0"></td></tr>
-    <tr><td>Apple</td><td><input type="number" id="apple-price" value="0"></td></tr>
-    <tr><td>Grape</td><td><input type="number" id="grape-price" value="0"></td></tr>
-    <tr><td>Blueberry</td><td><input type="number" id="blueberry-price" value="0"></td></tr>
-    <tr><td>Cherry</td><td><input type="number" id="cherry-price" value="0"></td></tr>
-    <tr><td>Orange</td><td><input type="number" id="orange-price" value="0"></td></tr>
-    <tr><td>Strawberry</td><td><input type="number" id="strawberry-price" value="0"></td></tr>
-    <tr><td>Banana</td><td><input type="number" id="banana-price" value="0"></td></tr>
-    <tr><td>Watermelon</td><td><input type="number" id="watermelon-price" value="0"></td></tr>
-    <tr><td>Moonberry</td><td><input type="number" id="moonberry-price" value="0"></td></tr>
-    <tr><td>Sunberry</td><td><input type="number" id="sunberry-price" value="0"></td></tr>
-    <tr><td>Shank</td><td><input type="number" id="shank-price" value="0"></td></tr>
-    <tr><td>Chicken</td><td><input type="number" id="chicken-price" value="0"></td></tr>
-    <tr><td>Egg</td><td><input type="number" id="egg-price" value="0"></td></tr>
-    <tr><td>Milk</td><td><input type="number" id="milk-price" value="0"></td></tr>
-    <tr><td>Cheese</td><td><input type="number" id="cheese-price" value="0"></td></tr>
-    <tr><td>Honey</td><td><input type="number" id="honey-price" value="0"></td></tr>
-    <tr><td>Beef</td><td><input type="number" id="beef-price" value="0"></td></tr>
-    <tr><td>Cotton</td><td><input type="number" id="cotton-price" value="0"></td></tr>
-    <tr><td>Hide</td><td><input type="number" id="hide-price" value="0"></td></tr>
-    <tr><td>Wool</td><td><input type="number" id="wool-price" value="0"></td></tr>
-    <tr><td>Salt</td><td><input type="number" id="salt-price" value="0"></td></tr>
-    <tr><td>Stone</td><td><input type="number" id="stone-price" value="0"></td></tr>
-    <tr><td>Copper Ore</td><td><input type="number" id="copper-ore-price" value="0"></td></tr>
-    <tr><td>Coal</td><td><input type="number" id="coal-price" value="0"></td></tr>
-    <tr><td>Small Log</td><td><input type="number" id="small-log-price" value="0"></td></tr>
-    <tr><td>Ground Flour</td><td><input type="number" id="ground-flour-price" value="0"></td></tr>
+    <tr><td>Potato</td><td><input type="number" id="potato-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Corn</td><td><input type="number" id="corn-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Wheat</td><td><input type="number" id="wheat-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Carrot</td><td><input type="number" id="carrot-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Cabbage</td><td><input type="number" id="cabbage-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Pepper</td><td><input type="number" id="pepper-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Salt</td><td><input type="number" id="salt-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Shank</td><td><input type="number" id="shank-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Egg</td><td><input type="number" id="egg-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Cheese</td><td><input type="number" id="cheese-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Stone</td><td><input type="number" id="stone-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Small Log</td><td><input type="number" id="small-log-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Hide</td><td><input type="number" id="hide-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Chicken</td><td><input type="number" id="chicken-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Milk</td><td><input type="number" id="milk-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Copper Ore</td><td><input type="number" id="copper-ore-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Apple</td><td><input type="number" id="apple-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Orange</td><td><input type="number" id="orange-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Onion</td><td><input type="number" id="onion-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Wool</td><td><input type="number" id="wool-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Grape</td><td><input type="number" id="grape-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Blueberry</td><td><input type="number" id="blueberry-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Moonberry</td><td><input type="number" id="moonberry-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Sunberry</td><td><input type="number" id="sunberry-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Brocolli</td><td><input type="number" id="brocolli-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Pumpkin</td><td><input type="number" id="pumpkin-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Banana</td><td><input type="number" id="banana-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Coal</td><td><input type="number" id="coal-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Garlic</td><td><input type="number" id="garlic-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Honey</td><td><input type="number" id="honey-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Cotton</td><td><input type="number" id="cotton-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Ground Flour</td><td><input type="number" id="ground-flour-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Pea</td><td><input type="number" id="pea-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Beans</td><td><input type="number" id="beans-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Strawberry</td><td><input type="number" id="strawberry-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Acorn</td><td><input type="number" id="acorn-price" value="0" onchange="updateAllCosts()"></td></tr>
+    <tr><td>Watermelon</td><td><input type="number" id="watermelon-price" value="0" onchange="updateAllCosts()"></td></tr>
   </table>
+
+  <div id="new-calculators"></div>
+
+  <script>
+    const tradePackages = [
+      { name: "Brined Shank", materials: [ { name: "Shank", quantity: 26 }, { name: "Salt", quantity: 12 }, { name: "Pepper", quantity: 60 } ] },
+      { name: "Sajecho's Spices", materials: [ { name: "Salt", quantity: 12 }, { name: "Orange", quantity: 7 }, { name: "Onion", quantity: 60 }, { name: "Pepper", quantity: 20 } ] },
+      { name: "Kabbar's Omelets", materials: [ { name: "Egg", quantity: 60 }, { name: "Cheese", quantity: 12 }, { name: "Pepper", quantity: 50 } ] },
+      { name: "Building Materials", materials: [ { name: "Stone", quantity: 185 }, { name: "Small Log", quantity: 70 }, { name: "Hide", quantity: 26 } ] },
+      { name: "Butcher's Box", materials: [ { name: "Chicken", quantity: 12 }, { name: "Beef", quantity: 35 }, { name: "Shank", quantity: 12 }, { name: "Cheese", quantity: 1 } ] },
+      { name: "Slums Provisions", materials: [ { name: "Small Log", quantity: 70 }, { name: "Shank", quantity: 24 }, { name: "Potato", quantity: 250 } ] },
+      { name: "Settler's Rations", materials: [ { name: "Corn", quantity: 65 }, { name: "Potato", quantity: 245 }, { name: "Shank", quantity: 22 } ] },
+      { name: "Pickled Vegetables", materials: [ { name: "Cabbage", quantity: 90 }, { name: "Carrot", quantity: 120 }, { name: "Salt", quantity: 8 } ] },
+      { name: "Dairy Delivery", materials: [ { name: "Milk", quantity: 30 }, { name: "Cheese", quantity: 6 }, { name: "Egg", quantity: 95 } ] },
+      { name: "Crafting Basics", materials: [ { name: "Copper Ore", quantity: 100 }, { name: "Hide", quantity: 20 }, { name: "Small Log", quantity: 85 } ] },
+      { name: "Campfire Roast", materials: [ { name: "Small Log", quantity: 40 }, { name: "Stone", quantity: 170 }, { name: "Chicken", quantity: 26 } ] },
+      { name: "Basic Rations", materials: [ { name: "Wheat", quantity: 100 }, { name: "Corn", quantity: 42 }, { name: "Apple", quantity: 12 }, { name: "Shank", quantity: 12 } ] },
+      { name: "Ravencrest Finest Wears", materials: [ { name: "Cotton", quantity: 48 }, { name: "Wool", quantity: 25 }, { name: "Hide", quantity: 18 } ] },
+      { name: "Margrove Ale Ingredients", materials: [ { name: "Wheat", quantity: 150 }, { name: "Acorn", quantity: 4 }, { name: "Pumpkin", quantity: 16 } ] },
+      { name: "Noble Delicacies", materials: [ { name: "Moonberry", quantity: 65 }, { name: "Acorn", quantity: 5 }, { name: "Pepper", quantity: 25 } ] },
+      { name: "Rohna Smoked Ham", materials: [ { name: "Shank", quantity: 15 }, { name: "Acorn", quantity: 11 }, { name: "Pea", quantity: 35 }, { name: "Salt", quantity: 6 } ] },
+      { name: "Vegetable Stew", materials: [ { name: "Brocolli", quantity: 20 }, { name: "Pumpkin", quantity: 20 }, { name: "Beans", quantity: 75 }, { name: "Potato", quantity: 95 } ] },
+      { name: "Pie Making Kit", materials: [ { name: "Apple", quantity: 15 }, { name: "Sunberry", quantity: 25 }, { name: "Cherry", quantity: 10 }, { name: "Ground Flour", quantity: 60 } ] },
+      { name: "Ravencrest Greens", materials: [ { name: "Brocolli", quantity: 45 }, { name: "Pea", quantity: 40 }, { name: "Cabbage", quantity: 60 } ] },
+      { name: "Aged Meat", materials: [ { name: "Beef", quantity: 30 }, { name: "Salt", quantity: 8 }, { name: "Garlic", quantity: 70 } ] },
+      { name: "General Spices", materials: [ { name: "Garlic", quantity: 55 }, { name: "Onion", quantity: 40 }, { name: "Pepper", quantity: 45 } ] },
+      { name: "Berry Basket", materials: [ { name: "Strawberry", quantity: 70 }, { name: "Blueberry", quantity: 170 }, { name: "Moonberry", quantity: 10 }, { name: "Sunberry", quantity: 36 } ] },
+      { name: "Crisp Produce", materials: [ { name: "Apple", quantity: 20 }, { name: "Brocolli", quantity: 20 }, { name: "Pea", quantity: 45 }, { name: "Beans", quantity: 50 } ] },
+      { name: "Winemakers Kit", materials: [ { name: "Grape", quantity: 70 }, { name: "Blueberry", quantity: 130 }, { name: "Moonberry", quantity: 36 } ] },
+      { name: "Fried Chicken", materials: [ { name: "Chicken", quantity: 25 }, { name: "Onion", quantity: 30 }, { name: "Garlic", quantity: 45 }, { name: "Ground Flour", quantity: 55 } ] },
+      { name: "Exotic Fruits", materials: [ { name: "Watermelon", quantity: 18 }, { name: "Sunberry", quantity: 25 }, { name: "Moonberry", quantity: 25 } ] },
+      { name: "Bakers Basics", materials: [ { name: "Milk", quantity: 30 }, { name: "Egg", quantity: 60 }, { name: "Ground Flour", quantity: 190 } ] },
+      { name: "Sailor's Remedy", materials: [ { name: "Carrot", quantity: 85 }, { name: "Orange", quantity: 8 }, { name: "Beans", quantity: 50 }, { name: "Blueberry", quantity: 200 } ] },
+      { name: "Kindling Kit", materials: [ { name: "Small Log", quantity: 75 }, { name: "Coal", quantity: 95 }, { name: "Cotton", quantity: 26 } ] },
+      { name: "Glaceforde Explorers Kit", materials: [ { name: "Wool", quantity: 38 }, { name: "Small Log", quantity: 45 }, { name: "Coal", quantity: 75 }, { name: "Cotton", quantity: 10 } ] },
+      { name: "Juicers Box", materials: [ { name: "Apple", quantity: 24 }, { name: "Strawberry", quantity: 60 }, { name: "Cherry", quantity: 9 }, { name: "Banana", quantity: 4 } ] },
+      { name: "Seabreeze Rum", materials: [ { name: "Corn", quantity: 80 }, { name: "Cabbage", quantity: 20 }, { name: "Banana", quantity: 10 }, { name: "Blueberry", quantity: 80 } ] },
+      { name: "Sajecho Fruit Basket", materials: [ { name: "Banana", quantity: 15 }, { name: "Watermelon", quantity: 8 }, { name: "Orange", quantity: 4 }, { name: "Grape", quantity: 35 } ] },
+      { name: "Fruit Basket", materials: [ { name: "Grape", quantity: 45 }, { name: "Watermelon", quantity: 12 }, { name: "Cherry", quantity: 16 } ] },
+      { name: "Sombreshade's Pie", materials: [ { name: "Pumpkin", quantity: 20 }, { name: "Milk", quantity: 22 }, { name: "Ground Flour", quantity: 60 }, { name: "Honey", quantity: 30 } ] },
+      { name: "Barbecue Specialty", materials: [ { name: "Beef", quantity: 26 }, { name: "Chicken", quantity: 8 }, { name: "Coal", quantity: 30 }, { name: "Honey", quantity: 40 } ] },
+      { name: "Strawberry Cakes", materials: [ { name: "Ground Flour", quantity: 95 }, { name: "Milk", quantity: 10 }, { name: "Strawberry", quantity: 135 }, { name: "Honey", quantity: 45 } ] }
+    ];
+
+    function createCalculator(package) {
+      const container = document.createElement('div');
+      const packageName = package.name.toLowerCase().replace(/\s/g, '-');
+
+      container.innerHTML = `
+        <h2>${package.name} 計算器</h2>
+        <table border="1" cellpadding="5">
+          <tr>
+            <th>材料</th>
+            <th>數量</th>
+            <th>交易所單價</th>
+            <th>成本</th>
+          </tr>
+          ${package.materials.map(material => `
+            <tr>
+              <td>${material.name}</td>
+              <td>${material.quantity}</td>
+              <td id="${packageName}-${material.name.toLowerCase()}-price"></td>
+              <td id="${packageName}-${material.name.toLowerCase()}-cost"></td>
+            </tr>
+          `).join('')}
+        </table>
+        <p><strong>總成本:</strong> <span id="${packageName}-total-cost">0</span></p>
+        <p><strong>需求係數:</strong> <input type="number" id="${packageName}-demand" value="0" step="0.1" onchange="updateTradePrice('${packageName}')"></p>
+        <p><strong>移動距離:</strong> <input type="number" id="${packageName}-distance" value="0" onchange="updateTradePrice('${packageName}')"></p>
+        <p><strong>售出價格:</strong> <span id="${packageName}-trade-price">0</span></p>
+        <p><strong>利潤率:</strong> <span id="${packageName}-profit-rate">0%</span></p>
+      `;
+
+      document.getElementById('new-calculators').appendChild(container);
+      updateCalculatorCosts(package);
+    }
+
+    function updateCalculatorCosts(package) {
+      const packageName = package.name.toLowerCase().replace(/\s/g, '-');
+      let totalCost = 0;
+
+      package.materials.forEach(material => {
+        const price = parseFloat(document.getElementById(`${material.name.toLowerCase()}-price`).value) || 0;
+        const cost = material.quantity * price;
+
+        document.getElementById(`${packageName}-${material.name.toLowerCase()}-price`).innerText = price;
+        document.getElementById(`${packageName}-${material.name.toLowerCase()}-cost`).innerText = cost.toFixed(2);
+
+        totalCost += cost;
+      });
+
+      document.getElementById(`${packageName}-total-cost`).innerText = totalCost.toFixed(2);
+      updateTradePrice(packageName);
+    }
+
+    function updateTradePrice(packageName) {
+      const totalCost = parseFloat(document.getElementById(`${packageName}-total-cost`).innerText) || 0;
+      const demand = parseFloat(document.getElementById(`${packageName}-demand`).value) || 0;
+      const distance = parseFloat(document.getElementById(`${packageName}-distance`).value) || 0;
+      const tradePrice = (40000 + (12 * distance)) * demand;
+      const profitRate = ((tradePrice - totalCost) / totalCost) * 100;
+
+      document.getElementById(`${packageName}-trade-price`).innerText = tradePrice.toFixed(2);
+      document.getElementById(`${packageName}-profit-rate`).innerText = isNaN(profitRate) ? '0%' : `${profitRate.toFixed(2)}%`;
+    }
+
+    function updateAllCosts() {
+      tradePackages.forEach(pkg => updateCalculatorCosts(pkg));
+    }
+
+    tradePackages.forEach(createCalculator);
+    updateAllCosts();
+  </script>
 </body>
 </html>
