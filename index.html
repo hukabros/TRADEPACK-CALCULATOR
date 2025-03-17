@@ -157,7 +157,7 @@
     function updateTradePrice(packageName, totalCost) {
       const demand = parseFloat(document.getElementById(`${packageName}-demand`).value) || 0;
       const distance = parseFloat(document.getElementById(`${packageName}-distance`).value) || 0;
-      const tradePrice = (40000 + (12 * distance)) * demand;
+      const tradePrice = (35000 + (15 * distance)) * demand;
       const profitRate = ((tradePrice - totalCost) / totalCost) * 100;
 
       document.getElementById(`${packageName}-trade-price`).innerText = tradePrice.toFixed(2);
